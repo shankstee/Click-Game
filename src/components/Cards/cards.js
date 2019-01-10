@@ -5,7 +5,7 @@ import React from 'react';
 
 
 const  Cards = (props) => 
-  (<div onClick = {() => props.handleClick(props.id)}>
+  (<div onClick = {() => props.handleClick(props.id, props.clicked)}>
     <div className="card" style={{width: 280}}>
         <img className="card-img-top" src={props.image} alt=""/>
     </div>

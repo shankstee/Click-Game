@@ -15,8 +15,19 @@ class App extends Component {
     }
   }
 
-  handleItemClick(id) {
-    console.log(id);
+  handleImgClick(id, clicked) {
+    // When the image is clicked, take that image id and change the clicked boolean value to true
+    
+
+    if (clicked === false) {
+      console.log(id, "Clicked:" + clicked);
+      clicked = true;
+    }
+
+
+    
+
+    
   }
 
   // Function to shuffle an array
@@ -33,6 +44,7 @@ class App extends Component {
     return arr;    
 };
 
+
   render() {
     return (
       <div className="App">
@@ -41,12 +53,14 @@ class App extends Component {
         {/* Create a new div for the img card to add flex CSS */}
         <div className="characterDiv">
         {/* Render each img from the images.json file in random order */}
+        
         {this.state.images.map(image => (
           <Cards  
           key={image.id}
           id={image.id}
           image={image.img}
-          handleClick = {this.handleItemClick}
+          clicked={image.clicked}
+          handleClick = {this.handleImgClick}
           
           />
         ))}
