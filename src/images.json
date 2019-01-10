@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name": "rick",
+        "img": "/assets/img/rick.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "carl",
+        "img": "/assets/img/carl.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Jesus",
+        "img": "/assets/img/jesus.jpg",
+        "clicked": false
+
+    },
+    {
+        "id": 4,
+        "name": "Maggie",
+        "img": "/assets/img/maggie.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "negan",
+        "img": "/assets/img/negan.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Carol",
+        "img": "/assets/img/carol.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Daryl",
+        "img": "/assets/img/daryl.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Glenn",
+        "img": "/assets/img/glenn.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Hershel",
+        "img": "/assets/img/hershel.png",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Michonne",
+        "img": "/assets/img/michonne.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Rosita",
+        "img": "/assets/img/rosita.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Tyreese",
+        "img": "/assets/img/tyreese.png",
+        "clicked": false
+    }
+]
