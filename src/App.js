@@ -15,37 +15,43 @@ class App extends Component {
     }
   }
 
-  handleImgClick(id, clicked) {
+  globalState = this.state;
+
+  
+
+  handleImgClick = (id, clicked) => {
+    
     // When the image is clicked, take that image id and change the clicked boolean value to true
     
+    // Take the current score and add one beofe setting a new
+    var updateScore = this.state.currentScore + 1;
+    // this.state.images.map(image => (
+    //   if (image.id === id) {
+    //     image.clicked = true;
+    //   }
+    // ))
 
     if (clicked === false) {
-      console.log(id, "Clicked:" + clicked);
-      clicked = true;
+      this.setState({
+        currentScore: updateScore,
+        images: this.random()
+  
+      });
     }
 
-
-    
+    console.log(this.state.currentScore);
 
     
   }
 
-  // Function to shuffle an array
-  shuffle(arr) {
-    var i,
-        j,
-        temp;
-    for (i = arr.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    return arr;    
-};
+  random = ()  => {
+    return (this.state.images.sort(function(a, b) {return 0.5 - Math.random()}));
+  }
 
 
   render() {
+
+    var random = this.state.images.sort(function(a, b) {return 0.5 - Math.random()});
     return (
       <div className="App">
       {/* Render the Navbar functional component and pass it the highscore/current score state as props */}
@@ -54,7 +60,7 @@ class App extends Component {
         <div className="characterDiv">
         {/* Render each img from the images.json file in random order */}
         
-        {this.state.images.map(image => (
+        {random.map(image => (
           <Cards  
           key={image.id}
           id={image.id}
