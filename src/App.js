@@ -11,7 +11,9 @@ class App extends Component {
     this.state = {
       images,
       highScore: 0,
-      currentScore: 0
+      currentScore: 0,
+      alreadyClicked: []
+
     }
   }
 
@@ -19,39 +21,41 @@ class App extends Component {
 
   
 
-  handleImgClick = (id, clicked) => {
-    
+  handleImgClick = (id, clicked) => { 
     // When the image is clicked, take that image id and change the clicked boolean value to true
     
     // Take the current score and add one beofe setting a new
-    var updateScore = this.state.currentScore + 1;
-    // this.state.images.map(image => (
-    //   if (image.id === id) {
-    //     image.clicked = true;
-    //   }
-    // ))
+    const newArray = this.state.images.map(image => {
+  
+      return image
+    });
+    
 
-    if (clicked === false) {
+    // If the image clicked is = false then add 1 to the state.current score and shuffle the images. 
+    if (this.state.alreadyClicked.includes(id)) {
+      alert("You already clicked that one, press OK to restart")
+    } else {
       this.setState({
-        currentScore: updateScore,
-        images: this.random()
+        currentScore: this.state.currentScore + 1,
+        images: newArray,
+        // take a copy arr and then create a new array with the addeed new ID
+        alreadyClicked: [...this.state.alreadyClicked, id]
   
       });
     }
 
-    console.log(this.state.currentScore);
+    console.log(this.state.alreadyClicked);
 
     
   }
 
-  random = ()  => {
-    return (this.state.images.sort(function(a, b) {return 0.5 - Math.random()}));
+  random = (arr)  => {
+    return (arr.sort(function(a, b) {return 0.5 - Math.random()}));
   }
 
 
   render() {
 
-    var random = this.state.images.sort(function(a, b) {return 0.5 - Math.random()});
     return (
       <div className="App">
       {/* Render the Navbar functional component and pass it the highscore/current score state as props */}
@@ -60,7 +64,7 @@ class App extends Component {
         <div className="characterDiv">
         {/* Render each img from the images.json file in random order */}
         
-        {random.map(image => (
+        {this.random(this.state.images).map(image => (
           <Cards  
           key={image.id}
           id={image.id}

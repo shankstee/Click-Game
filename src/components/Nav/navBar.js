@@ -7,8 +7,8 @@ const NavBar = (props) =>
             <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""/>Clicky Game
           </a>
           <ul className="nav navbar-nav navbar-right">
-            <li>Score: {props.highScore}</li>
-            <li>Top Score: {props.currentScore}</li>
+            <li>Score: {props.currentScore}</li>
+            <li>Top Score: {props.highScore}</li>
           </ul>
         </nav>
       </div>)
