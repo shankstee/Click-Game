@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "gh-pages": "^2.0.1",
+    "homepage": "https://shankstee.github.io/Click-Game/",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2",
     "reactstrap": "^7.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

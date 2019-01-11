@@ -17,8 +17,6 @@ class App extends Component {
     }
   }
 
-  globalState = this.state;
-
   
 
   handleImgClick = (id, clicked) => { 
