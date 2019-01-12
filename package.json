@@ -2,10 +2,10 @@
   "name": "clicky",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shankstee.github.io/Click-Game",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "gh-pages": "^2.0.1",
-    "homepage": "https://github.com/shankstee/Click-Game",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2",
