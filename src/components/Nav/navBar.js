@@ -1,17 +1,17 @@
 import React from "react";
 
 const NavBar = (props) =>
-      (<div className="App">
-        <nav className="navbar navbar-dark bg-dark">
+      (<>
+        <nav className="navbar">
           <a className="navbar-brand" href="/">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""/>Clicky Game
+            <h1>Zombie Memory</h1>
           </a>
-          <ul className="nav navbar-nav navbar-right">
-            <li>Score: {props.currentScore}</li>
-            <li>Top Score: {props.highScore}</li>
-          </ul>
+          <div id="scores">
+            <p><span className="scoreText">Score: </span> {props.currentScore}</p>
+            <p><span className="scoreText">Top Score: </span> {props.highScore}</p>
+          </div>
         </nav>
-      </div>)
+      </>)
     
   
 

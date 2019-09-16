@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "rick",
+        "name": "Rick",
         "img": "./assets/img/rick.jpg",
         "clicked": false
     },
     {
         "id": 2,
-        "name": "carl",
-        "img": "./assets/img/carl.jpg",
+        "name": "Tara",
+        "img": "./assets/img/tara.jpg",
         "clicked": false
     },
     {
@@ -21,13 +21,13 @@
     {
         "id": 4,
         "name": "Maggie",
-        "img": "./assets/img/maggie.png",
+        "img": "./assets/img/maggie.jpg",
         "clicked": false
     },
     {
         "id": 5,
-        "name": "negan",
-        "img": "./assets/img/negan.jpg",
+        "name": "Enid",
+        "img": "./assets/img/enid.jpg",
         "clicked": false
     },
     {
@@ -44,14 +44,14 @@
     },
     {
         "id": 8,
-        "name": "Glenn",
-        "img": "./assets/img/glenn.jpg",
+        "name": "Gabe",
+        "img": "./assets/img/gabe.jpg",
         "clicked": false
     },
     {
         "id": 9,
-        "name": "Hershel",
-        "img": "./assets/img/hershel.png",
+        "name": "Ezekiel",
+        "img": "./assets/img/ezekiel.jpg",
         "clicked": false
     },
     {
@@ -68,8 +68,8 @@
     },
     {
         "id": 12,
-        "name": "Tyreese",
-        "img": "./assets/img/tyreese.png",
+        "name": "Eugene",
+        "img": "./assets/img/eugene.jpg",
         "clicked": false
     }
 ]
